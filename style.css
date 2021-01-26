@@ -1,11 +1,90 @@
 /* CSS files add styling rules to your content */
 
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
 body {
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  font-family: "Helvetica Neue", "Benton Sans", helvetica, arial, sans-serif;
   margin: 2em;
 }
 
-h1 {
-  font-style: italic;
-  color: #373fff;
+/* GLOBAL TABLE STYLES AND BORDERS */
+
+table {
+  width: 100%;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+tr {
+  height: 1em;
+}
+
+table, tbody {
+  border: solid 3px #800080;
+}
+
+thead tr > td, tfoot tr > td {
+  border: solid 3px #800080;
+}
+
+/* TABLE HEADER FORMATTING */
+
+thead {
+  font-family: 'Rock Salt', sans-serif;
+  background-image: url("assets/leopardskin.jpg");
+  text-align: center;
+  color: white;
+  font-style: oblique;
+  font-size: 1.4em;
+  text-shadow: 1.3px 1.3px #000;
+  fill: rgba(0,0,0,0.1);
+}
+
+thead, td {
+  padding: 1em;
+}
+
+thead > tr > td:nth-child(1) {
+  width: 33%;
+}
+
+/* TABLE BODY FORMATTING */
+
+tbody {
+  text-align: center;
+  font-size: 1.2em;
+  text-transform: capitalize;
+}
+
+tbody tr > td:nth-child(1) {
+  font-weight: 600;
+}
+
+tbody > tr:nth-child(odd) {
+  background-image: url("assets/noise.png");
+  background-color: #ff33cc;
+}
+
+tbody > tr:nth-child(even) {
+  background-image: url("assets/noise.png");
+  background-color: #e495e4;
+}
+
+/* TABLE FOOTER FORMATTING */
+
+tfoot {
+  font-size: 1.3em;
+  color: white;
+  background-image: url("assets/leopardskin.jpg");
+  text-shadow: 1.3px 1.3px #000;
+  fill: rgba(0,0,0,0.5)
+}
+
+tfoot > tr > td:nth-child(1) {
+  font-family: 'Rock Salt', sans-serif;
+  text-align: right;
+}
+
+tfoot > tr > td:nth-child(2) {
+  text-align: left;
 }
